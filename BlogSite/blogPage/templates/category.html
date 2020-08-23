@@ -1,15 +1,15 @@
 {%extends 'base.html'%}
-{%block title%}Create a new blog post{%endblock%}
+{%block title%}Create a new blog category{%endblock%}
 {%block content%}
 
-<h1>Add new blog</h1><br><br>
+<h1>Add new category</h1><br><br>
 
 {% if user.is_authenticated %}
   <div class="form-group">
     <form class="" method="post">
       {% csrf_token %}
       {{form.as_p}}  <!-- as_p is as paragragh. can also do as_ul or as_table -->
-      <button class="btn btn-secondary">Post</button>
+      <button class="btn btn-secondary">Add category</button>
     </form>
   </div>
 {% else %}

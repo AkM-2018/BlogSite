@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block title%}Login{%endblock%}
+{%block content%}
+
+<h1>Login:</h1><br><br>
+
+<div class="form-group">
+  <form class="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}  <!-- as_p is as paragragh. can also do as_ul or as_table -->
+    <button class="btn btn-secondary">Login</button>
+  </form>
+</div>
+
+{%endblock%}

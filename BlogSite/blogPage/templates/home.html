@@ -6,8 +6,10 @@
 
 <ul>
 {% for post in object_list %}
-  <li><h3><u><a href="{% url 'article' post.pk %}">{{post.title}}</a></u></h3>{{post.author.first_name}} {{post.author.last_name}}<br><br>
-  {{post.body}}<hr><br><br></li>
+  <li><h3><u><a href="{% url 'article' post.pk %}">{{post.title}}</a></u></h3><br>
+  <h5>{{post.author.first_name}} {{post.author.last_name}}</h5>
+  <p>{{post.post_date}}</p><br>
+  {{post.body|slice:':200'}}<hr><br><br></li>
 {% endfor %}
 </ul>
 
